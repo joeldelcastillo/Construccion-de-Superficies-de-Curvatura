@@ -5,7 +5,7 @@ Proyecto Final de Cálculo 3 y Programación 2
 
 ### Herramientas:
 
-<img align="left" alt="OpenFrameworks" width="26px" src="https://avatars2.githubusercontent.com/u/142866?s=280&v=4" />
+<img align="left" alt="OpenFrameworks" width="60px" src="https://avatars2.githubusercontent.com/u/142866?s=280&v=4" />
 OpenFrameworks
 addons: ofxGui
 
