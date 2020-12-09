@@ -10,5 +10,5 @@ OpenFrameworks
 addons: ofxGui
 
 Si quieres seguir aportando en este proyecto
-No te olivides de dialogar con nosotros!!
+No te olvides de dialogar con nosotros!!
 ### Hay cosas increíbles que se pueden seguir haciendo, inspírate!
