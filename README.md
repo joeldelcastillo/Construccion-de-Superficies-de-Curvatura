@@ -11,4 +11,4 @@ addons: ofxGui
 
 Si quieres seguir aportando en este proyecto
 No te olivides de dialogar con nosotros!!
-### HAy cosas increíbles que se pueden seguir haciendo, inspírate!
+### Hay cosas increíbles que se pueden seguir haciendo, inspírate!
