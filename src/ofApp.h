@@ -4,30 +4,11 @@
 #include "math.h"
 #include <vector>
 #include "ofxGui.h"
+#include <windows.h>
 
 class ofApp : public ofBaseApp{
-	
-	public:
-		void setup();
-		void update();
-		void draw();
-		void setsize();
-		void setvector();
 
-		int numpoint(int x, int y, int matrix);
-
-		void keyPressed(int key);
-		void keyReleased(int key);
-		void mouseMoved(int x, int y );
-		void mouseDragged(int x, int y, int button);
-		void mousePressed(int x, int y, int button);
-		void mouseReleased(int x, int y, int button);
-		void mouseEntered(int x, int y);
-		void mouseExited(int x, int y);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
-
+	private:
 		ofEasyCam cam;
 		ofMesh mesh;
 
@@ -40,7 +21,9 @@ class ofApp : public ofBaseApp{
 		ofxToggle setzero;
 		ofxButton save;
 		ofxButton back;
-
+		ofxToggle turnX;
+		ofxToggle turnY;
+		ofxToggle turnZ;
 
 		bool wareframe;
 		bool justpoint;
@@ -48,16 +31,26 @@ class ofApp : public ofBaseApp{
 		bool paraboloid;
 		bool ellipsoid;
 		bool hyperbolicParaboloid;
+		float rotateX;
+		float rotateY;
+		float rotateZ;
+		bool sound;
 
 		int position;
 		int width;
 		int height;
 		int size;
 		vector<double> savedpoints;
+	
+	public:
+		void setup();
+		void update();
+		void draw();
+		void setsize();
+		void setvector();
 
+		int numpoint(int x, int y, int matrix);
 
-
-
-
-		
+		void keyPressed(int key);
+		void keyReleased(int key);	
 };

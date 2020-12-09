@@ -14,6 +14,8 @@ void ofApp::setup() {
 	bool paraboloid;
 	bool ellipsoid;
 	bool hyperbolicParaboloid;
+	bool sound = false;
+
 	//---------------------------------------
 	gui.setup();
 	gui.add(pointx.setup("X Position", 0, 0, width));
@@ -156,6 +158,31 @@ void ofApp::update() {
 		}
 	}
 
+	if (turnX)
+	{
+		rotateX++;
+		rotateY = 0;
+		rotateZ = 0;
+	}
+	if (turnY)
+	{
+		rotateX = 0;
+		rotateY++;
+		rotateZ = 0;
+	}
+	if (turnZ)
+	{
+		rotateX = 0;
+		rotateY = 0;
+		rotateZ++;
+	}
+
+	if (sound) {
+		position = numpoint(pointx, pointy, width);
+		ofVec3f point = mesh.getVertex(position);
+		double aux = abs(point.z);
+		Beep(aux * 100, 300);
+	}
 
 	//if(back) {
 	//	for (int y = 0; y < height; y++) {
@@ -203,6 +230,28 @@ void ofApp::draw() {
 		}
 	}
 
+	if (turnX == true)
+	{
+		ofRotateXDeg(rotateX);
+		//copyMesh.draw();         //solido
+		mesh.drawWireframe();   //mejor
+
+	}
+	if (turnY == true)
+	{
+		ofRotateYDeg(rotateY);
+		//copyMesh.draw();			//solido
+		mesh.drawWireframe();
+
+	}
+	if (turnZ == true)
+	{
+		ofRotateZDeg(rotateZ);
+		//copyMesh.draw();             solido
+		mesh.drawWireframe();
+	}
+
+
 	cam.end();
 
 
@@ -218,8 +267,9 @@ void ofApp::draw() {
 	string msg4 = "h: hyperbolic paraboloid nature to pull a point \n";
 	string msg5 = "e: elipsoid nature to pull a point \n";
 	string msg6 = "w: draw wireframe or point cloud";
+	string msg7 = "s: play sound";
 
-	ofDrawBitmapString(msg+msg1+msg2 + msg3+ msg4 + msg5 + msg6, 20, ofGetHeight()* 6/7);
+	ofDrawBitmapString(msg+msg1+msg2 + msg3+ msg4 + msg5 + msg6 + msg7, 20, ofGetHeight()* 6/7);
 	ofSetColor(100);
 }
 
@@ -275,6 +325,10 @@ void ofApp::keyPressed(int key) {
 		wareframe = !wareframe;
 		break;
 
+	case 's':
+		sound = true;
+		break;
+
 	/*case 'p':
 		b_perlinMesh = !b_perlinMesh;
 		break;*/
@@ -293,53 +347,15 @@ void ofApp::keyPressed(int key) {
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key) {
-
+	switch (key) {
+	case 's':
+		sound = false;
+		break;
+	}
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y) {
 
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg) {
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo) {
-
-}
 
 int ofApp::numpoint(int x, int y, int wd) {
 	return (y*wd +x);
