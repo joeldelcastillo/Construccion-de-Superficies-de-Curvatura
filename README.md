@@ -23,6 +23,7 @@ Para jugar con la app:
 3. Modifica los parámetros del panel de control.
 
 Para "editar" las curvas primero guarda tu trabajo con el boton trasparente en el panel.
+
 Modifica de nuevo los parámetros, utiliza otras curvas y crea cosas impresionantes!!
 
 #### TryProject_debug.exe
