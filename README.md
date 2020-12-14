@@ -15,6 +15,9 @@ Si quieres seguir aportando en este proyecto
 
 No te olvides de dialogar con nosotros!!
 
+### Hay cosas increíbles que se pueden seguir haciendo, inspírate!
+
+
 Para correr el proyecto, sustituye la carpeta src en un proyecto de OpenFrameworks.
 
 
@@ -36,8 +39,6 @@ Modifica de nuevo los parámetros, utiliza otras curvas y crea cosas impresionan
 ### Ve a nuestra página Web para conocer más sobre nuestro trabajo:
 
 [<img align="left" alt="WEB" width="80px" src="https://icons-for-free.com/iconfiles/png/512/global+globe+international+language+travel+world+icon-1320196706358094912.png" />][linkedin]
-
-### Hay cosas increíbles que se pueden seguir haciendo, inspírate!
 
 
 
