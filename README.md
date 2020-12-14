@@ -10,6 +10,7 @@ OpenFrameworks
 addons: ofxGui
 
 Si quieres seguir aportando en este proyecto
+
 No te olvides de dialogar con nosotros!!
 
 Para correr el proyecto, sustituye la carpeta src en un proyecto de OpenFrameworks.
