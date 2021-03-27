@@ -44,3 +44,5 @@ Modifica de nuevo los parámetros, utiliza otras curvas y crea cosas impresionan
 
 
 [linkedin]: https://sites.google.com/view/construccion-de-curvas/inicio
+
+![](*/.jpg)
